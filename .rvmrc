@@ -1,4 +1,4 @@
-rvm use ruby-1.9.3
+rvm use ruby-1.9.3@vagrant
 
 #alias veewee="bundle exec veewee"
 #alias irb="bundle exec irb"
