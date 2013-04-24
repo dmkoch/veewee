@@ -62,7 +62,7 @@ rm rubygems-1.8.24.tgz
 
 # Add /opt/ruby/bin to the global path as the last resort so
 # Ruby, RubyGems, and Chef/Puppet are visible
-echo 'PATH=$PATH:/opt/ruby/bin/'> /etc/profile.d/vagrantruby.sh
+echo 'PATH=$PATH:/opt/ruby/bin'> /etc/profile.d/vagrantruby.sh
 
 # Installing vagrant keys
 mkdir /home/vagrant/.ssh
