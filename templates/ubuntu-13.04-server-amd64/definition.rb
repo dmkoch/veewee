@@ -1,13 +1,13 @@
 Veewee::Session.declare({
   :cpu_count => '1',
-  :memory_size=> '2048',
-  :disk_size => '10140',
+  :memory_size => '2048',
+  :disk_size => '65536',
   :disk_format => 'VDI',
   :hostiocache => 'off',
   :os_type_id => 'Ubuntu_64',
-  :iso_file => "raring-server-amd64.iso",
-  :iso_src => "http://cdimage.ubuntu.com/ubuntu-server/daily/current/raring-server-amd64.iso",
-  :iso_md5 => '4d28335b0b1ae89610f47ffcfc7b7ec5',
+  :iso_file => "ubuntu-13.04-server-amd64.iso",
+  :iso_src => "http://releases.ubuntu.com/13.04/ubuntu-13.04-server-amd64.iso",
+  :iso_md5 => "7d335ca541fc4945b674459cde7bffb9",
   :iso_download_timeout => "1000",
   :boot_wait => "4",
   :boot_cmd_sequence => [
@@ -30,6 +30,16 @@ Veewee::Session.declare({
   :ssh_guest_port => "22",
   :sudo_cmd => "echo '%p'|sudo -S sh '%f'",
   :shutdown_cmd => "shutdown -P now",
-  :postinstall_files => [ "postinstall.sh"],
+  :postinstall_files => [
+   "build_time.sh",
+   "apt.sh",
+   "vbox.sh",
+   "sudo.sh",
+   "ruby.sh",
+   "chef.sh",
+   "puppet.sh",
+   "vagrant.sh",
+   "cleanup.sh"
+  ],
   :postinstall_timeout => "10000"
 })
