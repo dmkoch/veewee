@@ -24,6 +24,7 @@ Gem::Specification.new do |s|
   s.add_dependency "thor", "~> 0.15"
   s.add_dependency "highline"
   s.add_dependency "json"
+  #s.add_dependency "json", ">= 1.5.1", "< 1.8.0"
   s.add_dependency "progressbar"
   s.add_dependency "i18n"
   #s.add_dependency "cucumber", ">=1.0.0"
@@ -33,6 +34,7 @@ Gem::Specification.new do |s|
   s.add_dependency "childprocess"
   s.add_dependency "grit"
   s.add_dependency "fission", "0.4.0"
+  s.add_dependency "whichr"
 
   # Modified dependency version, as libxml-ruby dependency has been removed in version 2.1.1
   # See : https://github.com/ckruse/CFPropertyList/issues/14
