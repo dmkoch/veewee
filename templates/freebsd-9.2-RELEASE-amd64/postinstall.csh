@@ -1,6 +1,4 @@
 #!/bin/csh -x
-# NB: at the point when this script is run, vagrant's shell is csh
-
 set echo
 
 #Set the time correctly
