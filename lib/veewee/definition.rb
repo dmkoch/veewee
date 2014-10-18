@@ -1,3 +1,4 @@
+require 'yaml'
 require 'ostruct'
 require 'veewee/provider/core/helper/iso'
 
@@ -122,6 +123,18 @@ module Veewee
         env.logger.info("definition") { " - #{key} : #{options[key]}" }
       end
 
+    end
+
+    def declare_yaml(*files)
+      files.each do |file|
+        if Hash === file
+          env.logger.info("Reading hash options")
+        else
+          env.logger.info("Reading yaml file: #{file}")
+          file = YAML.load_file(file)
+        end
+        declare(file)
+      end
     end
 
     # Class method to loading a definition
