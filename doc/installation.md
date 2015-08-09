@@ -1,6 +1,8 @@
 # Veewee Installation
 
 Before installing Veewee, please see the [Requirements](requirements.md) doc.
+Currently supported versions of ruby: `1.9.3` to `2.2.1`
+##### IMPORTANT: For best results, please use the latest version of Ruby.
 
 ## Install as a gem
 
@@ -55,7 +57,7 @@ Run `bundle install` to install Gemfile dependencies for our local gemset:
 
 With rbenv already installed (see [Requirements](requirements.md)), ensure a ruby version that's supported by Veewee is available on your machine:
 
-    $ rbenv install 1.9.2-p320
+    $ rbenv install 2.2.1
     $ rbenv rehash
 
 Clone the veewee project from source:
@@ -66,7 +68,7 @@ Clone the veewee project from source:
 
 Set the local ruby version within the current directory:
 
-    $ rbenv local 1.9.2-p320
+    $ rbenv local 2.2.1
     $ rbenv rehash
 
 Run `bundle install` to install Gemfile dependencies for our selected ruby version:
